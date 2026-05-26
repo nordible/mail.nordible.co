@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started | Nordible Mail Onboarding</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    
+    <style>
+        :root {
+            /* Colors */
+            --color-bg:         #f5fcff;   /* Ice White */
+            --color-surface:    #dbf3fa;   /* Frost Blue */
+            --color-border:     #b7e9f6;   /* Sky Mist */
+            --color-secondary:  #92dff3;   /* Clear Cyan */
+            --color-accent:     #7ad7f0;   /* Aqua Breeze */
+            --color-navy:       #0A1628;   /* Deep Navy */
+            --color-text-body:  #2D3F55;   /* Muted Navy */
+
+            /* Fonts */
+            --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            --font-heading: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-mono:    'JetBrains Mono', 'Courier New', Courier, monospace;
+
+            /* Spacing */
+            --space-1:  4px;
+            --space-2:  8px;
+            --space-3:  16px;
+            --space-4:  24px;
+            --space-5:  32px;
+            --space-6:  48px;
+            --space-7:  64px;
+            --space-8:  96px;
+
+            /* Radius */
+            --radius-md:   8px;
+            --radius-lg:   12px;
+            --radius-xl:   16px;
+            --radius-full: 9999px;
+
+            /* Shadows */
+            --shadow-sm: 0 1px 3px rgba(10, 22, 40, 0.06);
+            --shadow-md: 0 4px 12px rgba(10, 22, 40, 0.08);
+            --shadow-lg: 0 12px 32px rgba(10, 22, 40, 0.10);
+            --shadow-blue: 0 8px 24px rgba(122, 215, 240, 0.20);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text-body);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            padding-bottom: var(--space-8);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-4);
+        }
+
+        h1, h2 {
+            font-family: var(--font-display);
+            color: var(--color-navy);
+            line-height: 1.2;
+        }
+
+        h1 { font-size: clamp(32px, 5vw, 48px); margin-bottom: var(--space-3); }
+        h2 { font-size: 28px; margin-bottom: var(--space-4); }
+        h3 { font-family: var(--font-heading); color: var(--color-navy); font-size: 18px; margin-bottom: var(--space-2); }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: 12px 24px;
+            border-radius: var(--radius-full);
+            font-family: var(--font-heading);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary { background: var(--color-accent); color: var(--color-navy); box-shadow: var(--shadow-md); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-blue); }
+        
+        .btn-outline { background: transparent; border: 1.5px solid var(--color-border); color: var(--color-navy); }
+        .btn-outline:hover { background: var(--color-surface); }
+
+        /* Hero */
+        .hero {
+            padding-top: var(--space-7);
+            padding-bottom: var(--space-6);
+            text-align: center;
+        }
+
+        .login-box {
+            background: white;
+            padding: var(--space-5);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow-lg);
+            margin-top: var(--space-5);
+            text-align: left;
+        }
+
+        .login-detail {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-3) 0;
+            border-bottom: 1px solid var(--color-surface);
+        }
+
+        .login-detail:last-child { border-bottom: none; }
+        .login-detail span:first-child { font-weight: 600; color: var(--color-navy); font-size: 14px; text-transform: uppercase; opacity: 0.6; }
+        .login-detail span:last-child { font-family: var(--font-mono); color: var(--color-navy); font-weight: 500; }
+
+        /* Checklist */
+        .checklist {
+            background: var(--color-surface);
+            padding: var(--space-4);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--space-6);
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            padding: var(--space-2) 0;
+            cursor: pointer;
+        }
+
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--color-accent);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+        }
+
+        .checklist-item.done .checkbox { background: var(--color-accent); border-color: var(--color-accent); }
+        .checklist-item.done .checkbox::after { content: '✓'; color: var(--color-navy); font-size: 14px; font-weight: 800; }
+        .checklist-item.done span { text-decoration: line-through; opacity: 0.5; }
+
+        /* Step Section */
+        .step-section {
+            background: white;
+            padding: var(--space-6);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--space-5);
+        }
+
+        .step-badge {
+            background: var(--color-surface);
+            color: var(--color-navy);
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: var(--space-3);
+            display: inline-block;
+        }
+
+        /* Table */
+        .settings-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-block: var(--space-4);
+            font-size: 15px;
+        }
+
+        .settings-table th, .settings-table td {
+            text-align: left;
+            padding: var(--space-3);
+            border-bottom: 1px solid var(--color-surface);
+        }
+
+        .settings-table th { color: var(--color-navy); font-weight: 600; opacity: 0.7; font-family: var(--font-heading); }
+        .settings-table td { font-family: var(--font-mono); color: var(--color-navy); }
+
+        /* Info Box */
+        .info-box {
+            background: #f0f9ff;
+            border-left: 4px solid var(--color-accent);
+            padding: var(--space-4);
+            margin-block: var(--space-4);
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+        }
+
+        .info-box p { margin-bottom: 0; font-size: 15px; }
+
+        /* Settings Block */
+        .settings-block {
+            background: var(--color-navy);
+            color: white;
+            padding: var(--space-5);
+            border-radius: var(--radius-lg);
+            margin-block: var(--space-4);
+            font-family: var(--font-mono);
+            font-size: 14px;
+            position: relative;
+        }
+
+        .settings-block h4 { color: var(--color-accent); margin-bottom: var(--space-3); font-family: var(--font-heading); }
+        .settings-line { margin-bottom: 4px; }
+        .settings-line span { opacity: 0.5; }
+
+        /* Sticky Help */
+        .help-widget {
+            position: fixed;
+            bottom: var(--space-4);
+            right: var(--space-4);
+            z-index: 100;
+        }
+
+        .help-btn {
+            background: #25D366; /* WhatsApp Green */
+            color: white;
+            padding: 12px 24px;
+            border-radius: var(--radius-full);
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .login-detail { flex-direction: column; align-items: flex-start; gap: 4px; }
+            .settings-table { font-size: 13px; }
+            .settings-table th, .settings-table td { padding: var(--space-2); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Section 1: Hero -->
+        <section class="hero">
+            <h1>Welcome, Local Business!</h1>
+            <p>Your professional inbox for <strong>localbusiness.com</strong> is ready for action. You're just a few steps away from a much more credible business identity.</p>
+            
+            <div class="login-box">
+                <h3>Your Access Details</h3>
+                <div class="login-detail">
+                    <span>Webmail URL</span>
+                    <span><a href="https://mail.nordible.co/webmail" style="color: var(--color-navy); text-decoration: underline;">mail.nordible.co/webmail</a></span>
+                </div>
+                <div class="login-detail">
+                    <span>Username</span>
+                    <span>username@localbusiness.com</span>
+                </div>
+                <div class="login-detail">
+                    <span>Password</span>
+                    <span><em>Check your welcome WhatsApp/Email</em></span>
+                </div>
+                <div style="margin-top: var(--space-4); text-align: center;">
+                    <a href="https://mail.nordible.co/webmail" class="btn btn-primary">Login to Webmail</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Progress Checklist -->
+        <div class="checklist">
+            <h3>Setup Success Checklist</h3>
+            <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="checkbox"></div>
+                <span>Point domain to Nordible (Step 1)</span>
+            </div>
+            <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="checkbox"></div>
+                <span>Connect your favorite app (Step 2)</span>
+            </div>
+            <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="checkbox"></div>
+                <span>Secure your deliverability (Step 3)</span>
+            </div>
+        </div>
+
+        <!-- Section 2: Step 1 (Domain Setup) -->
+        <section class="step-section">
+            <span class="step-badge">Step 1</span>
+            <h2>Point Your Domain to Nordible</h2>
+            <p>To receive emails, you need to tell your domain provider (like GoDaddy or Namecheap) where to send them. Log in to your registrar and update your <strong>DNS Settings</strong> with this MX record:</p>
+            
+            <table class="settings-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Host</th>
+                        <th>Points to</th>
+                        <th>Priority</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MX</td>
+                        <td>@</td>
+                        <td>mail.nordible.co</td>
+                        <td>10</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-box">
+                <p><strong>Too technical?</strong> Don't worry! Share your registrar login details securely via our WhatsApp chat, and our engineers will do this for you for free.</p>
+            </div>
+        </section>
+
+        <!-- Section 3: Step 2 (App Configuration) -->
+        <section class="step-section">
+            <span class="step-badge">Step 2</span>
+            <h2>Link to Your Favorite Apps</h2>
+            <p>You don't need a new app. You can use your new business email inside the <strong>Gmail app, Outlook, or Apple Mail</strong> you already have.</p>
+            
+            <div class="settings-block">
+                <h4>Incoming Server (IMAP)</h4>
+                <div class="settings-line"><span>Hostname:</span> mail.nordible.co</div>
+                <div class="settings-line"><span>Port:</span> 993</div>
+                <div class="settings-line"><span>Security:</span> SSL/TLS</div>
+                
+                <h4 style="margin-top: var(--space-4);">Outgoing Server (SMTP)</h4>
+                <div class="settings-line"><span>Hostname:</span> mail.nordible.co</div>
+                <div class="settings-line"><span>Port:</span> 465</div>
+                <div class="settings-line"><span>Security:</span> SSL/TLS</div>
+                <div class="settings-line"><span>Authentication:</span> Required (use your email & password)</div>
+            </div>
+
+            <p>When adding the account, choose <strong>"Other"</strong> or <strong>"IMAP"</strong> in your app settings.</p>
+        </section>
+
+        <!-- Section 4: Step 3 (Spam Protection) -->
+        <section class="step-section">
+            <span class="step-badge">Step 3</span>
+            <h2>Ensure You Reach the Inbox</h2>
+            <p>To make sure your invoices and pitches don't end up in your client's spam folder, add these two security records to your DNS settings:</p>
+            
+            <div class="settings-block">
+                <h4>SPF Record (TXT)</h4>
+                <div class="settings-line">v=spf1 include:mail.nordible.co ~all</div>
+                
+                <h4 style="margin-top: var(--space-4);">DKIM Record (TXT)</h4>
+                <div class="settings-line"><em>(Unique key provided in your welcome email)</em></div>
+            </div>
+            
+            <p style="font-size: 14px; opacity: 0.7;">These records prove to the world that you are the legitimate owner of your domain.</p>
+        </section>
+    </div>
+
+    <!-- Section 5: Help Widget -->
+    <div class="help-widget">
+        <a href="https://wa.me/919152333993?text=Hi%2C%20I%20need%20help%20setting%20up%20my%20Nordible%20email." target="_blank" class="help-btn">
+            <i data-lucide="message-circle"></i>
+            Talk to an Engineer
+        </a>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Checklist logic
+        function toggleCheck(el) {
+            el.classList.toggle('done');
+        }
+    </script>
+</body>
+</html>
