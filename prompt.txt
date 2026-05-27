@@ -1,27 +1,32 @@
-Act as an expert UX/UI designer and technical copywriter for a premium B2B SaaS company. I need you to write the full HTML/Markdown text and structure for a "Get Started" onboarding webpage on my website. 
+Mascot Asset Rules
 
-This page is meant for a new client (a small business owner) who just purchased a custom business email from Nordible Mail. In this specific scenario, assume the client is named "Local Business" and they already own the domain "localbusiness.com". 
+All mascot images are stored inside:
 
-================================================================
-DESIGN SYSTEM ALIGNMENT
-================================================================
-The page must use our established "Aqua Breeze" design system:
-- Palette: Ice White (#f5fcff) for backgrounds, Frost Blue (#dbf3fa) for surfaces, Sky Mist (#b7e9f6) for borders, Clear Cyan (#92dff3) for highlights, and Aqua Breeze (#7ad7f0) for primary CTAs.
-- Typography: Playfair Display for headers, DM Sans for UI/labels, Inter for body, and JetBrains Mono for technical settings.
-- Shadows: Use layered, low-opacity blue shadows for cards.
+/public/mascot/
 
-================================================================
-ONBOARDING SECTIONS
-================================================================
+Do not generate mascot illustrations in code.
 
-1. HERO SECTION: A welcoming headline and a brief message confirming their inbox for localbusiness.com is ready. Include a distinct call-out box showing their Webmail URL login link, their placeholder username (username@localbusiness.com), and a prompt to use their temporary password.
-2. INTERACTIVE PROGRESS CHECKLIST: Add a "Setup Success" checklist at the top that updates as they complete steps (visual simulation only). 
-   - [ ] Point domain to Nordible
-   - [ ] Connect your favorite app
-   - [ ] Secure your deliverability
-3. STEP 1 (DOMAIN SETUP): Write a clear, scannable instruction block telling them to update their DNS settings at their domain registrar (like GoDaddy or Namecheap). Provide a clean markdown table showing the exact MX record details they need to input (Type: MX, Host: @, Points to: mail.nordible.co, Priority: 10). Add a friendly "Don't want to do this? Share your registrar login securely via our chat, and we'll do it for free" fallback box.
-4. STEP 2 (APP CONFIGURATION): Write an instructional block explaining how they can link this email to their favorite existing apps (like the Gmail app, Outlook, or Apple Mail). Provide a beautifully structured, highlighted code/info block containing the exact Incoming (IMAP) and Outgoing (SMTP) settings, including hostnames (mail.nordible.co), safe SSL/TLS ports (993 and 465), and authentication requirements.
-5. STEP 3 (DELIVERABILITY & SPAM PROTECTION): Explain in very simple, business-owner-friendly terms why they need to add SPF and DKIM TXT records (e.g., "To ensure your invoices and pitches land in the Inbox, not the Spam folder"). Provide placeholders for these records.
-6. FIXED/STICKY HELP WIDGET: Conclude with an absolute-confidence support block. Emphasize that they can bypass automated bots and instantly reach a live network engineer via WhatsApp at +91-9152333993 if they run into any configuration issues.
+Always use existing mascot assets.
 
-Tone: Reassuring, authoritative, completely jargon-free, and structured for maximum scannability using bold text, bullet points, and warning/tip boxes. Use "mail.nordible.co" as the server.
+Use mascot images intentionally.
+
+Hero:
+hero-wave.webp
+
+Features:
+working-laptop.webp
+security-shield.webp
+mail-send.webp
+
+Pricing:
+pricing-peek.webp
+
+FAQ:
+faq-thinking.webp
+
+Footer CTA:
+celebrate.webp
+
+Preserve consistent sizing and spacing.
+
+Mascot images should never dominate the UI.
