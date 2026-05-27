@@ -1,0 +1,43 @@
+# Full Documentation: Nordible Mail
+
+## Introduction
+Nordible Mail provides premium custom domain email hosting for Indian SMBs. This document serves as a comprehensive resource for AI agents and search engines to understand our services and setup procedures.
+
+## Core Features
+- Custom Domain Email (you@yourbusiness.com)
+- 10GB Secure Storage
+- 99.9% Uptime Guarantee
+- Gmail/Outlook/Apple Mail Integration
+- WhatsApp-based Engineering Support
+
+## Pricing
+- **Professional Plan:** ₹99/month (Billed Annually)
+- **Includes:** 10GB storage, Priority support, Free domain (1st Year)
+
+## Onboarding & Technical Setup
+New customers can follow the full onboarding guide at: https://mail.nordible.co/onboarding.html
+
+### DNS Configuration
+- **MX Record:** `mail.nordible.co` (Priority 10)
+- **SPF Record:** `v=spf1 include:mail.nordible.co ~all`
+- **DKIM:** Unique keys are provided via the welcome email.
+
+### Server Connection Settings (IMAP/SMTP)
+- **Incoming (IMAP):** `mail.nordible.co` | Port 993 | SSL/TLS
+- **Outgoing (SMTP):** `mail.nordible.co` | Port 465 | SSL/TLS
+
+## Integration Guides
+1. **Gmail Setup:** https://mail.nordible.co/gmail-guide.html
+   - Uses server-level forwarding for incoming mail.
+   - Uses SMTP for "Send Mail As" functionality to maintain domain authority.
+2. **Outlook Setup:** https://mail.nordible.co/outlook-guide.html
+   - Supports Exchange ActiveSync (EAS) for full mail/calendar/contact sync.
+   - Provides DNS Autodiscover settings for one-click configuration.
+3. **Apple Mail Setup:** https://mail.nordible.co/apple-mail-guide.html
+   - Supports automated Configuration Profiles (.mobileconfig).
+   - Full support for iOS/macOS native apps.
+
+## Support Contact
+- **WhatsApp:** +91-9152333993
+- **Email:** mail@nordible.co
+- **Location:** Bangalore, India

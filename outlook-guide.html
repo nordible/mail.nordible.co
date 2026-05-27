@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Nordible Mail to Microsoft Outlook | Guide</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    
+    <style>
+        :root {
+            /* Colors */
+            --color-bg:         #f5fcff;   /* Ice White */
+            --color-surface:    #dbf3fa;   /* Frost Blue */
+            --color-border:     #b7e9f6;   /* Sky Mist */
+            --color-secondary:  #92dff3;   /* Clear Cyan */
+            --color-accent:     #7ad7f0;   /* Aqua Breeze */
+            --color-navy:       #0A1628;   /* Deep Navy */
+            --color-text-body:  #2D3F55;   /* Muted Navy */
+
+            /* Fonts */
+            --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            --font-heading: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-mono:    'JetBrains Mono', 'Courier New', Courier, monospace;
+
+            /* Spacing */
+            --space-1:  4px;
+            --space-2:  8px;
+            --space-3:  16px;
+            --space-4:  24px;
+            --space-5:  32px;
+            --space-6:  48px;
+            --space-7:  64px;
+            --space-8:  96px;
+
+            /* Radius */
+            --radius-md:   8px;
+            --radius-lg:   12px;
+            --radius-xl:   16px;
+            --radius-full: 9999px;
+
+            /* Shadows */
+            --shadow-sm: 0 1px 3px rgba(10, 22, 40, 0.06);
+            --shadow-md: 0 4px 12px rgba(10, 22, 40, 0.08);
+            --shadow-lg: 0 12px 32px rgba(10, 22, 40, 0.10);
+            --shadow-blue: 0 8px 24px rgba(122, 215, 240, 0.20);
+            
+            /* Motion */
+            --ease-out:    cubic-bezier(0.0, 0.0, 0.2, 1);
+            --duration-base:   200ms;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text-body);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            padding-top: var(--space-8);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-4);
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            color: var(--color-navy);
+            line-height: 1.2;
+            margin-bottom: var(--space-4);
+        }
+
+        h1 { font-size: clamp(32px, 6vw, 56px); font-weight: 800; text-align: center; margin-bottom: var(--space-6); }
+        h2 { font-size: clamp(24px, 4vw, 36px); font-weight: 700; margin-top: var(--space-7); }
+        h3 { font-family: var(--font-heading); font-size: clamp(18px, 3vw, 22px); font-weight: 600; margin-top: var(--space-5); }
+        
+        p { margin-bottom: var(--space-4); font-size: 18px; }
+        strong { color: var(--color-navy); font-weight: 600; }
+        
+        ol, ul { margin-bottom: var(--space-5); margin-left: var(--space-5); }
+        li { margin-bottom: var(--space-3); font-size: 17px; }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding-block: var(--space-4);
+            background: rgba(245, 252, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 24px;
+            color: var(--color-navy);
+            text-decoration: none;
+        }
+
+        /* Components */
+        .card {
+            background: white;
+            padding: var(--space-5);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow-md);
+            margin-block: var(--space-6);
+        }
+
+        .highlight-box {
+            background: var(--color-surface);
+            padding: var(--space-5);
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--color-accent);
+            margin-block: var(--space-5);
+        }
+
+        .highlight-box h4 {
+            font-family: var(--font-heading);
+            color: var(--color-navy);
+            margin-bottom: var(--space-2);
+            font-size: 18px;
+        }
+
+        .settings-block {
+            background: var(--color-navy);
+            color: white;
+            padding: var(--space-5);
+            border-radius: var(--radius-lg);
+            font-family: var(--font-mono);
+            font-size: 15px;
+            margin-block: var(--space-4);
+        }
+
+        .settings-block div { margin-bottom: var(--space-1); }
+        .settings-block span { color: var(--color-accent); font-weight: 500; }
+
+        .step-label {
+            display: inline-block;
+            background: var(--color-secondary);
+            color: var(--color-navy);
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+            font-family: var(--font-heading);
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: var(--space-2);
+        }
+
+        .settings-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-block: var(--space-4);
+            font-size: 14px;
+        }
+
+        .settings-table th, .settings-table td {
+            text-align: left;
+            padding: var(--space-3);
+            border: 1px solid var(--color-border);
+        }
+
+        .settings-table th { background: var(--color-surface); color: var(--color-navy); font-weight: 700; }
+        .settings-table td { font-family: var(--font-mono); }
+
+        /* Footer */
+        footer {
+            padding-block: var(--space-8) var(--space-5);
+            background: var(--color-surface);
+            border-top: 1px solid var(--color-border);
+            margin-top: var(--space-8);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        /* Motion */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">Nordible Mail</a>
+            <a href="index.html" class="btn-link" style="color: var(--color-navy); font-weight: 600; text-decoration: none;">&larr; Back to Home</a>
+        </div>
+    </nav>
+
+    <article class="container">
+        <header class="hero reveal">
+            <h1>Connecting Your Nordible Business Email to Microsoft Outlook (Desktop & Mobile)</h1>
+            <p>Relying on webmail interfaces can sometimes feel restrictive, especially if you manage multiple domains or require robust offline access. Fortunately, because Nordible Mail natively supports standard email and synchronization protocols, you can seamlessly link your mailboxes to Microsoft Outlook on both your desktop and your smartphone.</p>
+            <p>Connecting to Outlook unlocks a significant advantage: <strong>Exchange ActiveSync (EAS)</strong> support. Unlike standard IMAP, which only synchronizes your emails, ActiveSync allows Outlook to fully sync your <strong>emails, calendars, and contacts</strong> simultaneously without requiring third-party plugins.</p>
+        </header>
+
+        <section class="reveal">
+            <h2>Part 1: Microsoft Outlook for Desktop (Windows & Mac)</h2>
+            <p>The desktop version of Outlook handles Nordible Mail excellently. For the smoothest setup experience, our servers include built-in autodiscover protocols that allow Outlook to automatically find your server settings using just your email address and password.</p>
+
+            <div class="card">
+                <span class="step-label">Step 1</span>
+                <h3>Initialize Account Setup</h3>
+                <ol>
+                    <li>Launch <strong>Microsoft Outlook</strong> on your computer.</li>
+                    <li>If this is a fresh install, a setup prompt will appear automatically. Otherwise, click <strong>File</strong> in the top-left corner and select <strong>Add Account</strong>.</li>
+                </ol>
+            </div>
+
+            <div class="card">
+                <span class="step-label">Step 2</span>
+                <h3>Automatic Discovery (Recommended)</h3>
+                <ol>
+                    <li>Enter your complete business email address (e.g., <strong>you@yourbusiness.com</strong>).</li>
+                    <li>Click <strong>Connect</strong>. Outlook will attempt to scan your domain's DNS records for Nordible's autodiscover configuration.</li>
+                    <li>If successful, a prompt will appear requesting your account credentials. Enter your <strong>email password</strong> and click <strong>OK</strong>.</li>
+                </ol>
+            </div>
+
+            <div class="card">
+                <span class="step-label">Step 3</span>
+                <h3>Manual Fallback (If Autodiscover is Disabled)</h3>
+                <p>If your domain's DNS is not yet optimized for automatic discovery, you can quickly input the connection coordinates manually:</p>
+                <ol>
+                    <li>Select <strong>Advanced Options</strong> under the email input field and check <strong>"Let me set up my account manually"</strong>.</li>
+                    <li>Choose <strong>IMAP</strong> from the account type selection grid.</li>
+                    <li>Populate the server details as follows:</li>
+                </ol>
+                <div class="settings-block">
+                    <div><span>Incoming Mail Server:</span> mail.nordible.co</div>
+                    <div><span>Port:</span> 993 | <span>Encryption:</span> SSL/TLS</div>
+                    <div style="margin-top: var(--space-3);"><span>Outgoing Mail Server (SMTP):</span> mail.nordible.co</div>
+                    <div><span>Port:</span> 465 | <span>Encryption:</span> SSL/TLS</div>
+                </div>
+                <p>Click <strong>Next</strong>, input your email password, and click <strong>Connect</strong>.</p>
+            </div>
+        </section>
+
+        <section class="reveal">
+            <h2>Part 2: Microsoft Outlook for Mobile (iOS & Android)</h2>
+            <p>The mobile Outlook application is highly optimized for performance and handles push notifications for Nordible mailboxes effortlessly through <strong>Exchange ActiveSync</strong>.</p>
+
+            <div class="card">
+                <span class="step-label">Step 1</span>
+                <h3>Add a New Account</h3>
+                <ol>
+                    <li>Open the <strong>Outlook app</strong> on your mobile device.</li>
+                    <li>Tap the <strong>Home icon</strong> or your profile avatar in the top-left corner, then tap the <strong>Gear icon (Settings)</strong> at the bottom.</li>
+                    <li>Select <strong>Add Mail Account</strong>, then tap <strong>Add an Email Account</strong>.</li>
+                </ol>
+            </div>
+
+            <div class="card">
+                <span class="step-label">Step 2</span>
+                <h3>Let Outlook Detect the Server</h3>
+                <ol>
+                    <li>Type your full business email address and tap <strong>Continue</strong>.</li>
+                    <li>The app will attempt to automatically detect the architecture. If it prompts you to choose an account provider, choose <strong>Exchange</strong> (or <strong>Advanced Setup > Exchange</strong>).</li>
+                </ol>
+            </div>
+
+            <div class="card">
+                <span class="step-label">Step 3</span>
+                <h3>Configure ActiveSync</h3>
+                <p>To ensure your mail, calendar, and contacts all sync to your phone in real time, enter your parameters using the ActiveSync layout:</p>
+                <div class="settings-block">
+                    <div><span>Email Address:</span> you@yourbusiness.com</div>
+                    <div><span>Password:</span> Your email password</div>
+                    <div><span>Server:</span> mail.nordible.co</div>
+                    <div><span>Domain\Username:</span> (Enter your full email address)</div>
+                    <div><span>Description:</span> Work Email</div>
+                </div>
+                <p>Tap the <strong>Checkmark</strong> or <strong>Sign In</strong> button. Your data will begin downloading immediately.</p>
+            </div>
+        </section>
+
+        <section class="highlight-box reveal">
+            <h2>Optimization Pro-Tip: Setting Up DNS Autodiscover</h2>
+            <p>To make this process completely painless for your team, you should map <strong>Autodiscover</strong> records in your domain's DNS zone file. This allows Outlook to configure itself instantly with just an email and password:</p>
+            
+            <table class="settings-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Host/Name</th>
+                        <th>Value/Target</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>CNAME</strong></td>
+                        <td>autodiscover</td>
+                        <td>mail.nordible.co.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SRV</strong></td>
+                        <td>_autodiscover._tcp</td>
+                        <td>0 0 443 mail.nordible.co.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Once these records propagate, setup becomes a one-click process.</p>
+        </section>
+    </article>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nordible Mail. All rights reserved.</p>
+                <p>Made in India 🇮🇳</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Scroll Reveal Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use Nordible Mail Inside Gmail | Guide</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    
+    <style>
+        :root {
+            /* Colors */
+            --color-bg:         #f5fcff;   /* Ice White */
+            --color-surface:    #dbf3fa;   /* Frost Blue */
+            --color-border:     #b7e9f6;   /* Sky Mist */
+            --color-secondary:  #92dff3;   /* Clear Cyan */
+            --color-accent:     #7ad7f0;   /* Aqua Breeze */
+            --color-navy:       #0A1628;   /* Deep Navy */
+            --color-text-body:  #2D3F55;   /* Muted Navy */
+
+            /* Fonts */
+            --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            --font-heading: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-mono:    'JetBrains Mono', 'Courier New', Courier, monospace;
+
+            /* Spacing */
+            --space-1:  4px;
+            --space-2:  8px;
+            --space-3:  16px;
+            --space-4:  24px;
+            --space-5:  32px;
+            --space-6:  48px;
+            --space-7:  64px;
+            --space-8:  96px;
+
+            /* Radius */
+            --radius-md:   8px;
+            --radius-lg:   12px;
+            --radius-xl:   16px;
+            --radius-full: 9999px;
+
+            /* Shadows */
+            --shadow-sm: 0 1px 3px rgba(10, 22, 40, 0.06);
+            --shadow-md: 0 4px 12px rgba(10, 22, 40, 0.08);
+            --shadow-lg: 0 12px 32px rgba(10, 22, 40, 0.10);
+            --shadow-blue: 0 8px 24px rgba(122, 215, 240, 0.20);
+            
+            /* Motion */
+            --ease-out:    cubic-bezier(0.0, 0.0, 0.2, 1);
+            --duration-base:   200ms;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text-body);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            padding-top: var(--space-8);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-4);
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            color: var(--color-navy);
+            line-height: 1.2;
+            margin-bottom: var(--space-4);
+        }
+
+        h1 { font-size: clamp(32px, 6vw, 56px); font-weight: 800; text-align: center; margin-bottom: var(--space-6); }
+        h2 { font-size: clamp(24px, 4vw, 36px); font-weight: 700; margin-top: var(--space-7); }
+        h3 { font-size: clamp(20px, 3vw, 28px); font-weight: 600; margin-top: var(--space-5); }
+        
+        p { margin-bottom: var(--space-4); font-size: 18px; }
+        strong { color: var(--color-navy); font-weight: 600; }
+        
+        ol, ul { margin-bottom: var(--space-5); margin-left: var(--space-5); }
+        li { margin-bottom: var(--space-3); font-size: 17px; }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding-block: var(--space-4);
+            background: rgba(245, 252, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 24px;
+            color: var(--color-navy);
+            text-decoration: none;
+        }
+
+        /* Components */
+        .card {
+            background: white;
+            padding: var(--space-5);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow-md);
+            margin-block: var(--space-6);
+        }
+
+        .highlight-box {
+            background: var(--color-surface);
+            padding: var(--space-5);
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--color-accent);
+            margin-block: var(--space-5);
+        }
+
+        .highlight-box h4 {
+            font-family: var(--font-heading);
+            color: var(--color-navy);
+            margin-bottom: var(--space-2);
+            font-size: 18px;
+        }
+
+        .settings-block {
+            background: var(--color-navy);
+            color: white;
+            padding: var(--space-5);
+            border-radius: var(--radius-lg);
+            font-family: var(--font-mono);
+            font-size: 15px;
+            margin-block: var(--space-4);
+        }
+
+        .settings-block div { margin-bottom: var(--space-1); }
+        .settings-block span { color: var(--color-accent); font-weight: 500; }
+
+        .step-label {
+            display: inline-block;
+            background: var(--color-secondary);
+            color: var(--color-navy);
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+            font-family: var(--font-heading);
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: var(--space-2);
+        }
+
+        /* Footer */
+        footer {
+            padding-block: var(--space-8) var(--space-5);
+            background: var(--color-surface);
+            border-top: 1px solid var(--color-border);
+            margin-top: var(--space-8);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        /* Motion */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">Nordible Mail</a>
+            <a href="index.html" class="btn-link" style="color: var(--color-navy); font-weight: 600; text-decoration: none;">&larr; Back to Home</a>
+        </div>
+    </nav>
+
+    <article class="container">
+        <header class="hero reveal">
+            <h1>How to Use Your Nordible Business Email Directly Inside Gmail</h1>
+            <p>While webmail clients handle the basics, many professionals prefer the interface, search capabilities, and familiarity of Gmail. With Nordible Mail, you don't have to sacrifice your professional domain name to use Google's platform.</p>
+            <p>By linking your Nordible instance with a personal Gmail account, you can read, organize, and reply to client messages using your business identity (<strong>you@yourbusiness.com</strong>) seamlessly from the Gmail interface.</p>
+        </header>
+
+        <section class="reveal">
+            <h2>The Strategy: Seamless Two-Way Integration</h2>
+            <p>To get a fast, real-time email experience, we avoid Gmail's old POP3 fetching method (which can introduce 15–30 minute delays). Instead, we will configure a two-part system:</p>
+            <ul>
+                <li><strong>Incoming Mail:</strong> Nordible instantly routes incoming business emails to Gmail via a secure server-level forwarder.</li>
+                <li><strong>Outgoing Mail:</strong> Gmail routes your replies back through Nordible’s SMTP server, ensuring your professional domain passes all modern security checks (SPF, DKIM) and never shows up as "via gmail.com".</li>
+            </ul>
+        </section>
+
+        <section class="card reveal">
+            <h2>Part 1: Instant Routing for Incoming Mail</h2>
+            <p>First, we need to make sure that any email hitting your Nordible server immediately forwards a copy to your Gmail inbox.</p>
+            <ol>
+                <li>Log into your Nordible Mail UI using your mailbox credentials.</li>
+                <li>Navigate to <strong>Email > Configuration > Mailboxes</strong>.</li>
+                <li>Find your specific business mailbox in the list and click the <strong>Edit</strong> button next to it.</li>
+                <li>Scroll down to the <strong>Forwarding</strong> section.</li>
+                <li>In the fields provided, add your personal <strong>@gmail.com</strong> address.</li>
+            </ol>
+            <div class="highlight-box">
+                <h4>Crucial Step</h4>
+                <p>Ensure that <strong>"Keep a copy in the mailbox"</strong> remains checked. This keeps a safe, permanent archive on your own Nordible server as a backup.</p>
+            </div>
+            <p><strong>Test it:</strong> Send an email from a third account to your business address. It should instantly land in your Gmail inbox.</p>
+        </section>
+
+        <section class="reveal">
+            <h2>Part 2: Configuring Gmail to "Send Mail As" Your Domain</h2>
+            <p>With incoming mail working, the next step is authorizing Gmail to send messages on behalf of your business domain using Nordible’s infrastructure.</p>
+
+            <div class="card">
+                <span class="step-label">Step 1</span>
+                <h3>Access Gmail Settings</h3>
+                <ul>
+                    <li>Open Gmail on a desktop web browser.</li>
+                    <li>Click the <strong>Gear icon</strong> in the upper right corner and select <strong>See all settings</strong>.</li>
+                    <li>Select the <strong>Accounts and Import</strong> tab.</li>
+                    <li>Locate the "Send mail as:" section and click <strong>Add another email address</strong>. A small yellow configuration window will pop up.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <span class="step-label">Step 2</span>
+                <h3>Set Your Identity</h3>
+                <ul>
+                    <li><strong>Name:</strong> Enter the name you want recipients to see (e.g., Kabeer Shah).</li>
+                    <li><strong>Email address:</strong> Type your complete business email address (you@yourbusiness.com).</li>
+                    <li>Leave <strong>"Treat as an alias"</strong> checked.</li>
+                    <li>Click <strong>Next Step</strong>.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <span class="step-label">Step 3</span>
+                <h3>Authenticate with Nordible SMTP</h3>
+                <p>To prevent your emails from hitting your clients' spam folders, Gmail must log directly into your server. Enter your details exactly as follows:</p>
+                <div class="settings-block">
+                    <div><span>SMTP Server:</span> mail.nordible.co</div>
+                    <div><span>Port:</span> 465</div>
+                    <div><span>Username:</span> you@yourbusiness.com</div>
+                    <div><span>Password:</span> Your email account password</div>
+                    <div><span>Secured connection:</span> SSL (Required for Port 465)</div>
+                </div>
+                <p>Click <strong>Add Account</strong>.</p>
+            </div>
+
+            <div class="card">
+                <span class="step-label">Step 4</span>
+                <h3>Complete the Verification</h3>
+                <p>Google will now issue a verification request to ensure you own the domain.</p>
+                <ul>
+                    <li>Because you successfully completed Part 1, the Google verification email will appear right in your Gmail inbox.</li>
+                    <li>Open the email, copy the numerical verification code, paste it into the yellow popup window, and click <strong>Verify</strong>.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="reveal">
+            <h2>Tailoring Gmail for a Professional Workflow</h2>
+            <p>To ensure you don't accidentally reply to a client from your personal email address, make one final adjustment:</p>
+            <ol>
+                <li>Return to <strong>Settings > Accounts and Import</strong>.</li>
+                <li>Under the "Send mail as" section, look for <strong>"When replying to a message:"</strong>.</li>
+                <li>Change this option to <strong>"Reply from the same address the message was sent to"</strong>.</li>
+            </ol>
+            <p>With this toggle active, Gmail intelligently adapts. If a client writes to your business domain, hitting reply automatically switches your outbound address—saving you manual steps and keeping your professional branding perfectly intact.</p>
+        </section>
+    </article>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nordible Mail. All rights reserved.</p>
+                <p>Made in India 🇮🇳</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Scroll Reveal Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

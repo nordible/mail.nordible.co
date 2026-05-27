@@ -1,0 +1,25 @@
+# Nordible Mail
+
+Professional custom domain email hosting for Indian SMBs, freelancers, and agencies.
+
+## Key Information
+- **URL:** https://mail.nordible.co
+- **Core Product:** Professional business email starting at ₹99/month.
+- **Support:** WhatsApp at +91-9152333993 | Email at mail@nordible.co
+- **Pricing:** Single plan - ₹99/month (Professional).
+
+## Documentation & Guides
+- [Onboarding / Get Started](https://mail.nordible.co/onboarding.html): Initial setup for new customers including domain (MX) and server (IMAP/SMTP) settings.
+- [Gmail Integration Guide](https://mail.nordible.co/gmail-guide.html): Step-by-step instructions for using custom domain email inside the personal Gmail interface.
+- [Outlook Setup Guide](https://mail.nordible.co/outlook-guide.html): Connecting to Microsoft Outlook on Desktop and Mobile via Exchange ActiveSync.
+- [Apple Mail Guide](https://mail.nordible.co/apple-mail-guide.html): Integrating with iOS/macOS using Configuration Profiles or manual setup.
+
+## Technical Specifications
+- **MX Record:** mail.nordible.co (Priority 10)
+- **Incoming (IMAP):** mail.nordible.co | Port 993 | SSL/TLS
+- **Outgoing (SMTP):** mail.nordible.co | Port 465 | SSL/TLS
+- **SPF:** v=spf1 include:mail.nordible.co ~all
+
+## Legal
+- [Privacy Policy](https://mail.nordible.co/index.html#privacy)
+- [Terms of Service](https://mail.nordible.co/index.html#terms)
