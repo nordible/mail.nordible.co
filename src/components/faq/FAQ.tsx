@@ -1,4 +1,5 @@
 import { Mascot } from "@/components/mascot/Mascot";
+import { siteConfig } from "@/lib/constants";
 
 export function FAQ() {
   const faqs = [
@@ -12,7 +13,7 @@ export function FAQ() {
     },
     {
       question: "Can I use my existing domain?",
-      answer: "Yes, absolutely! If you already have a domain, you can connect it to EMAIL by Nordible.Co in just a few clicks. We provide easy instructions to connect any domain you own."
+      answer: `Yes, absolutely! If you already have a domain, you can connect it to ${siteConfig.name} in just a few clicks. We provide easy instructions to connect any domain you own.`
     },
     {
       question: "Will my old emails be lost if I switch?",

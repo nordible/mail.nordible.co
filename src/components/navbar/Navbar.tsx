@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { buttonVariants } from "@/components/ui/button";
+import { siteConfig } from "@/lib/constants";
 
 export function Navbar() {
   return (
@@ -17,7 +18,7 @@ export function Navbar() {
           </div>
           <div className="flex flex-col">
             <span className="font-heading font-black text-2xl leading-none text-nordible-dark tracking-tight">
-              <span className="text-nordible-blue">EMAIL</span> <span className="text-lg font-black opacity-90">by Nordible.Co</span>
+              <span className="text-nordible-blue">{siteConfig.logoPrefix}</span> <span className="text-lg font-black opacity-90">{siteConfig.logoSuffix}</span>
             </span>
           </div>
         </Link>

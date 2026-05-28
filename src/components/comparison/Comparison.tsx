@@ -1,3 +1,5 @@
+import { siteConfig } from "@/lib/constants";
+
 export function Comparison() {
   return (
     <section className="py-24 bg-white">
@@ -17,7 +19,7 @@ export function Comparison() {
             <thead>
               <tr className="border-b-2 border-nordible-dark">
                 <th className="text-left py-6 px-4 font-heading font-bold text-lg text-nordible-dark">Feature</th>
-                <th className="py-6 px-4 font-heading font-bold text-xl text-nordible-blue bg-nordible-bg rounded-t-xl border-x border-t border-nordible-border">EMAIL by Nordible.Co</th>
+                <th className="py-6 px-4 font-heading font-bold text-xl text-nordible-blue bg-nordible-bg rounded-t-xl border-x border-t border-nordible-border">{siteConfig.name}</th>
                 <th className="py-6 px-4 font-heading font-bold text-lg text-[#2D3F55]">Google Workspace</th>
                 <th className="py-6 px-4 font-heading font-bold text-lg text-[#2D3F55]">Microsoft 365</th>
               </tr>

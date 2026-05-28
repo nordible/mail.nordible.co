@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Mascot } from "@/components/mascot/Mascot";
+import { siteConfig } from "@/lib/constants";
 
 export function Footer() {
   return (
@@ -14,7 +15,7 @@ export function Footer() {
             <div className="flex flex-col pt-2">
               <Link href="/" className="inline-block mb-4 group">
                 <span className="font-heading font-black text-2xl lg:text-3xl text-white tracking-tight">
-                  <span className="text-nordible-blue">EMAIL</span> <span className="text-lg font-bold opacity-90">by Nordible.Co</span>
+                  <span className="text-nordible-blue">{siteConfig.logoPrefix}</span> <span className="text-lg font-bold opacity-90">{siteConfig.logoSuffix}</span>
                 </span>
               </Link>
               <p className="text-nordible-bg opacity-70 max-w-[280px] text-base leading-relaxed font-medium">

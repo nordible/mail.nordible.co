@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Sora } from "next/font/google";
+import { siteConfig } from "@/lib/constants";
 import "./globals.css";
 
 const inter = Inter({
@@ -13,7 +14,7 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
-  title: "EMAIL by Nordible.Co | Professional Business Email Hosting",
+  title: `${siteConfig.name} | Professional Business Email Hosting`,
   description: "Secure, reliable business email with custom domains, powerful spam protection, and effortless setup. Starting at ₹89/month.",
   icons: {
     icon: [
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     apple: "/favicon.png",
   },
   openGraph: {
-    title: "EMAIL by Nordible.Co | Professional Business Email Hosting",
+    title: `${siteConfig.name} | Professional Business Email Hosting`,
     description: "Secure, reliable business email with custom domains, powerful spam protection, and effortless setup. Starting at ₹89/month.",
     type: "website",
   }

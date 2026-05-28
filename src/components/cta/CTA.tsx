@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { Mascot } from "@/components/mascot/Mascot";
+import { siteConfig } from "@/lib/constants";
 
 export function CTA() {
   return (
@@ -16,7 +17,7 @@ export function CTA() {
               Ready to look more professional?
             </h2>
             <p className="text-xl md:text-2xl text-[#2D3F55] mb-12 opacity-80 leading-relaxed font-medium">
-              Join thousands of businesses using EMAIL by Nordible.Co for their professional email. 
+              Join thousands of businesses using {siteConfig.name} for their professional email. 
               Setup takes less than 10 minutes.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
