@@ -8,11 +8,11 @@ export function Footer() {
       <div className="max-w-[1280px] mx-auto px-8 md:px-12 lg:px-24 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-16 mb-20">
           
-          <div className="lg:col-span-2 flex items-start gap-6 lg:gap-8">
-            <div className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 shrink-0 transform -scale-x-100 transition-transform hover:scale-[-1.05] duration-500 drop-shadow-xl relative">
+          <div className="lg:col-span-2 flex items-start gap-0">
+            <div className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 shrink-0 -mr-4 md:-mr-6 lg:-mr-8 transform -scale-x-100 transition-transform hover:scale-[-1.05] duration-500 drop-shadow-xl relative z-0">
               <Mascot variant="pricing-peek" alt="Googloo" className="w-full h-full object-contain" />
             </div>
-            <div className="flex flex-col pt-2">
+            <div className="flex flex-col pt-2 relative z-10">
               <Link href="/" className="inline-block mb-4 group">
                 <span className="font-heading font-black text-2xl lg:text-3xl text-white tracking-tight">
                   <span className="text-nordible-blue">{siteConfig.logoPrefix}</span> <span className="text-lg font-bold opacity-90">{siteConfig.logoSuffix}</span>
