@@ -16,7 +16,11 @@ export const metadata: Metadata = {
   title: "email by Nordible.co | Professional Business Email Hosting",
   description: "Secure, reliable business email with custom domains, powerful spam protection, and effortless setup. Starting at ₹89/month.",
   icons: {
-    icon: "/favicon.png",
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
   openGraph: {
     title: "email by Nordible.co | Professional Business Email Hosting",

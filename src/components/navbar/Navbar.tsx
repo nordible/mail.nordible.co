@@ -9,7 +9,7 @@ export function Navbar() {
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-12 h-12 transition-transform group-hover:rotate-6 drop-shadow-sm">
             <Image
-              src="/logo.webp"
+              src="/favicon.png"
               alt="Nordible Logo"
               fill
               className="object-contain"
@@ -17,7 +17,7 @@ export function Navbar() {
           </div>
           <div className="flex flex-col">
             <span className="font-heading font-black text-2xl leading-none text-nordible-dark tracking-tight">
-              EMAIL <span className="text-lg font-bold">by Nordible.co</span>
+              <span className="text-nordible-blue">EMAIL</span> <span className="text-lg font-bold">by Nordible.co</span>
             </span>
           </div>
         </Link>

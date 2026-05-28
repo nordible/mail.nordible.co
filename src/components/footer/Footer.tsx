@@ -12,14 +12,14 @@ export function Footer() {
               <div className="flex items-center gap-2">
                 <div className="relative w-10 h-10 drop-shadow-sm">
                    <Image
-                      src="/logo.webp"
+                      src="/favicon.png"
                       alt="Nordible Logo"
                       fill
                       className="object-contain invert brightness-0"
                     />
                 </div>
                 <span className="font-heading font-black text-2xl text-white tracking-tight">
-                  EMAIL <span className="text-lg font-bold">by Nordible.co</span>
+                  <span className="text-nordible-blue">EMAIL</span> <span className="text-lg font-bold">by Nordible.co</span>
                 </span>
               </div>
             </Link>

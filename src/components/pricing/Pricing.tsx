@@ -106,18 +106,18 @@ export function Pricing() {
             </ul>
           </div>
 
-          {/* Business Plan */}
+          {/* Custom Plan */}
           <div className="bg-white rounded-[40px] p-10 border border-nordible-border/50 shadow-xl shadow-nordible-blue/5 flex flex-col transition-transform duration-300 hover:scale-[1.02]">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-heading font-bold text-nordible-dark mb-3">Business</h3>
-              <p className="text-base text-[#2D3F55] mb-8 opacity-70">For large teams and organizations.</p>
+              <h3 className="text-2xl font-heading font-bold text-nordible-dark mb-3">Custom</h3>
+              <p className="text-base text-[#2D3F55] mb-8 opacity-70">For agencies and large teams.</p>
               <div className="text-5xl font-black text-nordible-dark mb-2">
-                ₹399<span className="text-lg font-medium text-[#2D3F55] opacity-50">/mo</span>
+                Tailored
               </div>
-              <p className="text-sm text-nordible-blue font-bold tracking-wide">Billed annually</p>
+              <p className="text-sm text-nordible-blue font-bold tracking-wide">Contact for details</p>
             </div>
-            <a href="https://wa.me/919152333993?text=Hi%2C%20I%20want%20to%20get%20started%20with%20the%20Business%20Email%20plan%20for%20%E2%82%B9399." target="_blank" className="flex items-center justify-center w-full mb-10 border-2 border-nordible-blue/20 text-nordible-blue hover:bg-nordible-blue hover:text-white rounded-full font-bold py-4 transition-all duration-300 shadow-sm">
-              Get Started
+            <a href="https://wa.me/919152333993?text=Hi%2C%20I%20am%20interested%20in%20a%20Custom%20Email%20Plan." target="_blank" className="flex items-center justify-center w-full mb-10 border-2 border-nordible-blue/20 text-nordible-blue hover:bg-nordible-blue hover:text-white rounded-full font-bold py-4 transition-all duration-300 shadow-sm">
+              Contact Us
             </a>
             <ul className="space-y-5 flex-1">
               <li className="flex items-center gap-4 text-base font-bold text-nordible-dark">
@@ -130,35 +130,24 @@ export function Pricing() {
                 <div className="w-6 h-6 rounded-full bg-nordible-blue/10 flex items-center justify-center shrink-0">
                   <Check className="w-4 h-4 text-nordible-blue" />
                 </div>
-                100GB Secure Storage
+                Unlimited Storage Options
               </li>
               <li className="flex items-center gap-4 text-base text-[#2D3F55]">
                 <div className="w-6 h-6 rounded-full bg-nordible-blue/10 flex items-center justify-center shrink-0">
                   <Check className="w-4 h-4 text-nordible-blue" />
                 </div>
-                Advanced Compliance
+                Dedicated IP & Compliance
               </li>
               <li className="flex items-center gap-4 text-base text-[#2D3F55]">
                 <div className="w-6 h-6 rounded-full bg-nordible-blue/10 flex items-center justify-center shrink-0">
                   <Check className="w-4 h-4 text-nordible-blue" />
                 </div>
-                24/7 Phone Support
+                24/7 Dedicated Support
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Custom Plan Banner */}
-        <div className="mt-16 bg-white rounded-[32px] p-8 lg:p-12 border border-nordible-border/50 shadow-2xl flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto gap-8 relative z-10 hover:shadow-nordible-blue/10 transition-shadow">
-          <div>
-            <h3 className="text-3xl font-heading font-black text-nordible-dark mb-3">Need a Custom Solution?</h3>
-            <p className="text-[#2D3F55] text-lg max-w-xl opacity-70 leading-relaxed">For agencies and large organizations requiring massive storage, dedicated IPs, or bulk mailbox creation.</p>
-          </div>
-          <a href="https://wa.me/919152333993?text=Hi%2C%20I%20am%20interested%20in%20a%20Custom%20Email%20Plan." target="_blank" className="flex items-center justify-center shrink-0 h-16 border-[3px] border-nordible-dark text-nordible-dark hover:bg-nordible-dark hover:text-white rounded-full font-black py-3 px-10 transition-all duration-300 whitespace-nowrap text-lg">
-            Contact for Details
-          </a>
-        </div>
-        
         <p className="text-center mt-16 text-sm text-[#2D3F55] opacity-50 relative z-10 font-medium">
           * Prices are exclusive of GST as applicable. 30-day money-back guarantee.
         </p>
