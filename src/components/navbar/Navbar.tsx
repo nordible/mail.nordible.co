@@ -17,7 +17,7 @@ export function Navbar() {
           </div>
           <div className="flex flex-col">
             <span className="font-heading font-black text-2xl leading-none text-nordible-dark tracking-tight">
-              email by <span className="text-nordible-blue">Nordible.co</span>
+              EMAIL <span className="text-lg font-bold">by Nordible.co</span>
             </span>
           </div>
         </Link>

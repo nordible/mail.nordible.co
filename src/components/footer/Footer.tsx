@@ -18,8 +18,8 @@ export function Footer() {
                       className="object-contain invert brightness-0"
                     />
                 </div>
-                <span className="font-heading font-black text-2xl text-white">
-                  email by <span className="text-nordible-blue">Nordible.co</span>
+                <span className="font-heading font-black text-2xl text-white tracking-tight">
+                  EMAIL <span className="text-lg font-bold">by Nordible.co</span>
                 </span>
               </div>
             </Link>
