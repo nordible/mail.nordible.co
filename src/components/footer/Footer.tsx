@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -9,11 +10,16 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-6">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-nordible-blue rounded-full flex items-center justify-center text-white font-bold text-xl">
-                  N
+                <div className="relative w-10 h-10 drop-shadow-sm">
+                   <Image
+                      src="/logo.webp"
+                      alt="Nordible Logo"
+                      fill
+                      className="object-contain invert brightness-0"
+                    />
                 </div>
-                <span className="font-heading font-bold text-2xl text-white">
-                  Nordible<span className="text-nordible-blue">.co</span>
+                <span className="font-heading font-black text-2xl text-white">
+                  email by <span className="text-nordible-blue">Nordible.co</span>
                 </span>
               </div>
             </Link>
@@ -56,7 +62,7 @@ export function Footer() {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-nordible-bg opacity-60">
           <p>&copy; {new Date().getFullYear()} Nordible Mail. All rights reserved.</p>
           <div className="flex items-center gap-2">
-            Made in India 🇮🇳
+            Trusted by businesses worldwide 🌍
           </div>
         </div>
       </div>

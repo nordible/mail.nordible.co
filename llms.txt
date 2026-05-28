@@ -1,6 +1,6 @@
 # Nordible Mail
 
-Professional custom domain email hosting for Indian SMBs, freelancers, and agencies.
+Professional custom domain email hosting for businesses of all sizes, from startups to enterprises.
 
 ## Key Information
 - **URL:** https://mail.nordible.co
@@ -8,9 +8,10 @@ Professional custom domain email hosting for Indian SMBs, freelancers, and agenc
 - **Support:** WhatsApp at +91-9152333993 | Email at mail@nordible.co
 
 ## Pricing Tiers (Billed Annually)
-1. **Basic:** ₹149/month (5GB Storage)
-2. **Professional:** ₹299/month (20GB Storage, Free Domain 1st Year)
-3. **Business:** ₹599/month (100GB Storage, 24/7 Phone Support)
+1. **Starter:** ₹89/month (10GB Storage)
+2. **Professional:** ₹199/month (30GB Storage)
+3. **Business:** ₹399/month (100GB Storage, 24/7 Phone Support)
+4. **Custom:** Contact for details (For agencies requiring bulk mailboxes, dedicated IPs, etc.)
 
 ## Documentation & Guides
 - [Onboarding / Get Started](https://mail.nordible.co/business-email-setup.html): Initial setup for new customers including domain (MX) and server (IMAP/SMTP) settings.

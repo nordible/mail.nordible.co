@@ -25,7 +25,7 @@ export function Comparison() {
             <tbody className="text-[#2D3F55]">
               <tr className="border-b border-nordible-border">
                 <td className="py-4 px-4 font-semibold text-nordible-dark">Starting Price</td>
-                <td className="py-4 px-4 text-center font-bold text-nordible-dark bg-nordible-bg border-x border-nordible-border">₹149/mo</td>
+                <td className="py-4 px-4 text-center font-bold text-nordible-dark bg-nordible-bg border-x border-nordible-border">₹89/mo</td>
                 <td className="py-4 px-4 text-center">₹500+/mo</td>
                 <td className="py-4 px-4 text-center">₹450+/mo</td>
               </tr>

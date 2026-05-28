@@ -1,20 +1,14 @@
 export function SocialProof() {
   return (
-    <section className="py-16 border-b border-nordible-border bg-white">
-      <div className="max-w-[1280px] mx-auto px-6 text-center">
-        <p className="text-sm font-semibold text-[#2D3F55] uppercase tracking-wider mb-8">
-          Trusted by businesses worldwide
-        </p>
-        
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-          {/* Placeholder logos using text for now to maintain layout without external image dependencies */}
-          <div className="text-2xl font-bold font-heading text-nordible-dark">stripe</div>
-          <div className="text-2xl font-bold font-heading text-nordible-dark">amazon</div>
-          <div className="text-2xl font-bold font-heading text-nordible-dark flex items-center gap-1">
-            <div className="w-6 h-6 bg-[#95BF47] rounded-sm"></div> shopify
-          </div>
-          <div className="text-2xl font-bold font-heading text-nordible-dark">Microsoft</div>
-          <div className="text-2xl font-bold font-heading text-nordible-dark">HubSpot</div>
+    <section className="py-20 bg-white border-y border-nordible-border/50">
+      <div className="max-w-[1280px] mx-auto px-6">
+        <div className="flex flex-col items-center">
+          <p className="text-[13px] font-bold text-[#2D3F55]/60 uppercase tracking-[0.2em] mb-4">
+            Trusted by businesses worldwide
+          </p>
+          <p className="text-xl font-medium text-[#2D3F55]/80">
+            Join over 10,000+ organizations who trust email by Nordible.co
+          </p>
         </div>
       </div>
     </section>

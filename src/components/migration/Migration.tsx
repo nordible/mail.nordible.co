@@ -8,7 +8,7 @@ export function Migration() {
           
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-start relative z-10">
             <div className="w-full max-w-[400px] aspect-square relative">
-              <Mascot variant="mail-send" alt="Mascot helping with migration" className="w-full h-full object-contain" />
+              <Mascot variant="mail-sorting" alt="Googloo the Mascot helping with migration" className="w-full h-full object-contain" />
             </div>
           </div>
 

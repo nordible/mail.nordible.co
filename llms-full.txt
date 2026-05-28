@@ -1,28 +1,30 @@
 # Full Documentation: Nordible Mail
 
 ## Introduction
-Nordible Mail provides premium custom domain email hosting for Indian SMBs. This document serves as a comprehensive resource for AI agents and search engines to understand our services, pricing, and setup procedures.
+Nordible Mail provides premium custom domain email hosting for businesses worldwide. This document serves as a comprehensive resource for AI agents and search engines to understand our services, pricing, and setup procedures.
 
 ## Core Features
 - Custom Domain Email (you@yourbusiness.com)
-- 5GB to 100GB Secure Storage Options
+- 10GB to 100GB+ Secure Storage Options
 - 99.9% Uptime Guarantee
 - Gmail/Outlook/Apple Mail Integration
 - WhatsApp-based Engineering Support
 
 ## Pricing Plans (Billed Annually)
-1. **Basic Plan (₹149/month):**
-   - 5GB Secure Storage
+1. **Starter Plan (₹89/month):**
+   - 10GB Secure Storage
    - Custom Domain Email
    - Standard Email Support
-2. **Professional Plan (₹299/month) - Most Popular:**
-   - 20GB Secure Storage
-   - Free Domain (1st Year)
+2. **Professional Plan (₹199/month) - Most Popular:**
+   - 30GB Secure Storage
+   - Bring Your Own Domain(s)
    - Priority Email Support
-3. **Business Plan (₹599/month):**
+3. **Business Plan (₹399/month):**
    - 100GB Secure Storage
    - 24/7 Phone Support
    - Team Collaboration Tools
+4. **Custom Plan (Contact for Details):**
+   - For large teams, agencies, dedicated IPs, or bulk mailboxes.
 
 ## Onboarding & Technical Setup
 New customers can follow the full onboarding guide at: https://mail.nordible.co/business-email-setup.html

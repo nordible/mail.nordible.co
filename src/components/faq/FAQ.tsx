@@ -5,12 +5,12 @@ export function FAQ() {
       answer: "A custom domain email is an address that uses your business name instead of a provider's (like @gmail.com). For example, if your business is 'Sharma Designs', your email would be ramesh@sharmadesigns.in. It makes you look 10x more professional instantly."
     },
     {
-      question: "How is this different from Gmail or Yahoo?",
-      answer: "While Gmail is great for personal use, it doesn't give you brand ownership. Nordible Mail gives you a dedicated server for your business, better deliverability to corporate inboxes, and the ability to create multiple addresses for your team under one brand."
+      question: "Is this better than Google Workspace?",
+      answer: "For growing businesses worldwide, yes. Google Workspace costs ₹500+ per user. We provide the same professional credibility and reliable inbox starting at just ₹89/month, making it a negligible cost for a massive brand upgrade."
     },
     {
       question: "Can I use my existing domain?",
-      answer: "Yes, absolutely! If you already have a domain, you can connect it to Nordible Mail in just a few clicks. If you don't have one yet, our Professional plan includes a free domain for the first year to get you started."
+      answer: "Yes, absolutely! If you already have a domain, you can connect it to Nordible Mail in just a few clicks. We provide easy instructions to connect any domain you own."
     },
     {
       question: "Will my old emails be lost if I switch?",
