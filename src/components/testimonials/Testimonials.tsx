@@ -41,7 +41,7 @@ export function Testimonials() {
 
   return (
     <section className="py-32 bg-[#FAFBFF] border-y border-nordible-border/50 overflow-hidden">
-      <div className="max-w-[1280px] mx-auto px-6 mb-20 text-center">
+      <div className="max-w-[1280px] mx-auto px-8 md:px-12 lg:px-24 mb-20 text-center">
         <h2 className="text-4xl md:text-[48px] font-bold font-heading text-nordible-dark mb-6 tracking-tighter">
           Trusted by Businesses Worldwide
         </h2>

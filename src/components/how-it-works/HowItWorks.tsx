@@ -34,7 +34,7 @@ export function HowItWorks() {
 
   return (
     <section className="py-32 bg-white">
-      <div className="max-w-[1280px] mx-auto px-6">
+      <div className="max-w-[1280px] mx-auto px-8 md:px-12 lg:px-24">
         <div className="text-center mb-24">
           <h2 className="text-4xl md:text-[48px] font-bold font-heading text-nordible-dark mb-6">
             How It Works

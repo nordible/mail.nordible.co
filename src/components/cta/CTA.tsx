@@ -5,7 +5,7 @@ import { Mascot } from "@/components/mascot/Mascot";
 export function CTA() {
   return (
     <section className="py-32 bg-white relative overflow-hidden">
-      <div className="max-w-[1280px] mx-auto px-6 relative z-10">
+      <div className="max-w-[1280px] mx-auto px-8 md:px-12 lg:px-24 relative z-10">
         <div className="bg-nordible-section rounded-[60px] p-12 md:p-24 text-center border border-nordible-border/50 shadow-2xl relative overflow-hidden group">
           
           {/* Background Gradient Pulse */}
@@ -16,7 +16,7 @@ export function CTA() {
               Ready to look more professional?
             </h2>
             <p className="text-xl md:text-2xl text-[#2D3F55] mb-12 opacity-80 leading-relaxed font-medium">
-              Join thousands of businesses using Nordible.co for their professional email. 
+              Join thousands of businesses using EMAIL by Nordible.Co for their professional email. 
               Setup takes less than 10 minutes.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-6">

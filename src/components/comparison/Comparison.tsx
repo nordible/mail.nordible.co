@@ -1,7 +1,7 @@
 export function Comparison() {
   return (
     <section className="py-24 bg-white">
-      <div className="max-w-[1024px] mx-auto px-6">
+      <div className="max-w-[1024px] mx-auto px-8 md:px-12 lg:px-24">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-[40px] font-bold font-heading text-nordible-dark mb-4">
             How We Compare
@@ -17,7 +17,7 @@ export function Comparison() {
             <thead>
               <tr className="border-b-2 border-nordible-dark">
                 <th className="text-left py-6 px-4 font-heading font-bold text-lg text-nordible-dark">Feature</th>
-                <th className="py-6 px-4 font-heading font-bold text-xl text-nordible-blue bg-nordible-bg rounded-t-xl border-x border-t border-nordible-border">Nordible Mail</th>
+                <th className="py-6 px-4 font-heading font-bold text-xl text-nordible-blue bg-nordible-bg rounded-t-xl border-x border-t border-nordible-border">EMAIL by Nordible.Co</th>
                 <th className="py-6 px-4 font-heading font-bold text-lg text-[#2D3F55]">Google Workspace</th>
                 <th className="py-6 px-4 font-heading font-bold text-lg text-[#2D3F55]">Microsoft 365</th>
               </tr>

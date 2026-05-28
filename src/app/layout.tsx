@@ -13,7 +13,7 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
-  title: "email by Nordible.co | Professional Business Email Hosting",
+  title: "EMAIL by Nordible.Co | Professional Business Email Hosting",
   description: "Secure, reliable business email with custom domains, powerful spam protection, and effortless setup. Starting at ₹89/month.",
   icons: {
     icon: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     apple: "/favicon.png",
   },
   openGraph: {
-    title: "email by Nordible.co | Professional Business Email Hosting",
+    title: "EMAIL by Nordible.Co | Professional Business Email Hosting",
     description: "Secure, reliable business email with custom domains, powerful spam protection, and effortless setup. Starting at ₹89/month.",
     type: "website",
   }

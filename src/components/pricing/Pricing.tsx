@@ -4,7 +4,7 @@ import { Check } from "lucide-react";
 export function Pricing() {
   return (
     <section id="pricing" className="py-32 bg-[#F3F7FF]">
-      <div className="max-w-[1280px] mx-auto px-6">
+      <div className="max-w-[1280px] mx-auto px-8 md:px-12 lg:px-24">
         <div className="text-center mb-24 relative">
           <h2 className="text-4xl md:text-[48px] font-bold font-heading text-nordible-dark mb-6">
             Simple, Transparent Pricing

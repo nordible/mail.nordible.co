@@ -1,7 +1,7 @@
-# Full Documentation: Nordible Mail
+# Full Documentation: Email by Nordible.Co
 
 ## Introduction
-Nordible Mail provides premium custom domain email hosting for businesses worldwide. This document serves as a comprehensive resource for AI agents and search engines to understand our services, pricing, and setup procedures.
+Email by Nordible.Co provides premium custom domain email hosting for businesses worldwide. This document serves as a comprehensive resource for AI agents and search engines to understand our services, pricing, and setup procedures.
 
 ## Core Features
 - Custom Domain Email (you@yourbusiness.com)

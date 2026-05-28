@@ -12,7 +12,7 @@ export function Security() {
 
   return (
     <section id="security" className="py-24 bg-nordible-dark text-white overflow-hidden relative">
-      <div className="max-w-[1280px] mx-auto px-6 relative z-10">
+      <div className="max-w-[1280px] mx-auto px-8 md:px-12 lg:px-24 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           
           {/* Mascot Column */}

@@ -21,7 +21,7 @@ export function Features() {
 
   return (
     <section id="features" className="py-24 bg-white overflow-hidden">
-      <div className="max-w-[1280px] mx-auto px-6 mb-20">
+      <div className="max-w-[1280px] mx-auto px-8 md:px-12 lg:px-24 mb-20">
         <div className="text-center">
           <h2 className="text-3xl md:text-[40px] font-bold font-heading text-nordible-dark mb-4">
             Everything Your Business Needs

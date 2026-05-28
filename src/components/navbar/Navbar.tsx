@@ -5,7 +5,7 @@ import { buttonVariants } from "@/components/ui/button";
 export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-nordible-border/50 bg-white/70 backdrop-blur-xl transition-all">
-      <div className="max-w-[1280px] mx-auto px-6 h-24 flex items-center justify-between">
+      <div className="max-w-[1280px] mx-auto px-8 md:px-12 lg:px-24 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-12 h-12 transition-transform group-hover:rotate-6 drop-shadow-sm">
             <Image
@@ -17,7 +17,7 @@ export function Navbar() {
           </div>
           <div className="flex flex-col">
             <span className="font-heading font-black text-2xl leading-none text-nordible-dark tracking-tight">
-              <span className="text-nordible-blue">EMAIL</span> <span className="text-lg font-bold">by Nordible.co</span>
+              <span className="text-nordible-blue">EMAIL</span> <span className="text-lg font-black opacity-90">by Nordible.Co</span>
             </span>
           </div>
         </Link>

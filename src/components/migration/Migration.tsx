@@ -3,7 +3,7 @@ import { Mascot } from "@/components/mascot/Mascot";
 export function Migration() {
   return (
     <section id="migration" className="py-24 bg-white relative overflow-hidden">
-      <div className="max-w-[1280px] mx-auto px-6">
+      <div className="max-w-[1280px] mx-auto px-8 md:px-12 lg:px-24">
         <div className="bg-nordible-section rounded-[40px] p-8 md:p-16 border border-nordible-border shadow-sm flex flex-col lg:flex-row items-center gap-12">
           
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-start relative z-10">

@@ -1,3 +1,5 @@
+import { Mascot } from "@/components/mascot/Mascot";
+
 export function FAQ() {
   const faqs = [
     {
@@ -10,7 +12,7 @@ export function FAQ() {
     },
     {
       question: "Can I use my existing domain?",
-      answer: "Yes, absolutely! If you already have a domain, you can connect it to Nordible Mail in just a few clicks. We provide easy instructions to connect any domain you own."
+      answer: "Yes, absolutely! If you already have a domain, you can connect it to EMAIL by Nordible.Co in just a few clicks. We provide easy instructions to connect any domain you own."
     },
     {
       question: "Will my old emails be lost if I switch?",
@@ -27,29 +29,39 @@ export function FAQ() {
   ];
 
   return (
-    <section className="py-24 bg-nordible-bg" id="faq">
-      <div className="max-w-[768px] mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-[40px] font-bold font-heading text-nordible-dark mb-4">
-            Frequently Asked Questions
-          </h2>
-          <div className="w-24 h-1 bg-nordible-blue mx-auto rounded-full"></div>
+    <section className="py-48 bg-[#FAFBFF]" id="faq">
+      <div className="max-w-[900px] mx-auto px-8 md:px-12 lg:px-24">
+        <div className="text-center mb-24 relative">
+          <div className="flex flex-row items-center justify-center gap-6 mb-8">
+            <div className="text-right">
+              <h2 className="text-4xl md:text-[56px] font-bold font-heading text-nordible-dark tracking-tight mb-2">
+                Got Questions?
+              </h2>
+              <p className="text-xl text-nordible-blue font-black uppercase tracking-[0.2em]">Googloo has answers.</p>
+            </div>
+            <div className="w-24 h-24 transform rotate-6 hover:rotate-0 transition-transform duration-500 cursor-help shrink-0">
+              <Mascot variant="pricing-peek" alt="Googloo the Mascot" className="w-full h-full object-contain drop-shadow-xl" />
+            </div>
+          </div>
+          <div className="w-32 h-2 bg-nordible-blue mx-auto rounded-full"></div>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-6">
           {faqs.map((faq, index) => (
             <details 
               key={index} 
-              className="group bg-white border border-nordible-border rounded-2xl overflow-hidden [&_summary::-webkit-details-marker]:hidden"
+              className="group bg-white border border-nordible-border/50 rounded-[32px] overflow-hidden [&_summary::-webkit-details-marker]:hidden shadow-xl shadow-nordible-blue/5 hover:shadow-nordible-blue/10 transition-all duration-500"
             >
-              <summary className="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-nordible-dark text-lg select-none">
+              <summary className="flex items-center justify-between cursor-pointer p-8 md:p-10 font-heading font-black text-nordible-dark text-xl md:text-2xl select-none leading-tight transition-all group-open:bg-nordible-section/30">
                 {faq.question}
-                <span className="transition group-open:rotate-180">
-                  <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
-                </span>
+                <div className="w-12 h-12 rounded-2xl bg-nordible-blue/10 flex items-center justify-center shrink-0 group-open:bg-nordible-blue group-open:text-white transition-all duration-500 group-open:rotate-180 shadow-sm">
+                  <svg className="w-6 h-6 transform stroke-[4]" fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                </div>
               </summary>
-              <div className="px-6 pb-6 text-[#2D3F55] leading-relaxed">
-                <p>{faq.answer}</p>
+              <div className="px-8 md:px-10 pb-10 text-[#2D3F55] text-lg leading-relaxed opacity-70 font-medium bg-gradient-to-b from-nordible-section/30 to-white">
+                <div className="pt-4 border-t border-nordible-dark/5">
+                  <p>{faq.answer}</p>
+                </div>
               </div>
             </details>
           ))}

@@ -1,4 +1,4 @@
-# Nordible Mail
+# Email by Nordible.Co
 
 Professional custom domain email hosting for businesses of all sizes, from startups to enterprises.
 
