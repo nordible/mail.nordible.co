@@ -27,7 +27,7 @@ Email by Nordible.Co provides premium custom domain email hosting for businesses
    - For large teams, agencies, dedicated IPs, or bulk mailboxes.
 
 ## Onboarding & Technical Setup
-New customers can follow the full onboarding guide at: https://mail.nordible.co/business-email-setup.html
+New customers can follow the full onboarding guide at: https://email.nordible.co/business-email-setup.html
 
 ### DNS Configuration
 - **MX Record:** `mail.nordible.co` (Priority 10)
@@ -39,13 +39,13 @@ New customers can follow the full onboarding guide at: https://mail.nordible.co/
 - **Outgoing (SMTP):** `mail.nordible.co` | Port 465 | SSL/TLS
 
 ## Integration Guides
-1. **Gmail Setup:** https://mail.nordible.co/gmail-business-email-setup.html
+1. **Gmail Setup:** https://email.nordible.co/gmail-business-email-setup.html
    - Uses server-level forwarding for incoming mail.
    - Uses SMTP for "Send Mail As" functionality to maintain domain authority.
-2. **Outlook Setup:** https://mail.nordible.co/outlook-business-email-setup.html
+2. **Outlook Setup:** https://email.nordible.co/outlook-business-email-setup.html
    - Supports Exchange ActiveSync (EAS) for full mail/calendar/contact sync.
    - Provides DNS Autodiscover settings for one-click configuration.
-3. **Apple Mail Setup:** https://mail.nordible.co/apple-mail-business-email-setup.html
+3. **Apple Mail Setup:** https://email.nordible.co/apple-mail-business-email-setup.html
    - Supports automated Configuration Profiles (.mobileconfig).
    - Full support for iOS/macOS native apps.
 
