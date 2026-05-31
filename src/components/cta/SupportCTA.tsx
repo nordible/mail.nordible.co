@@ -27,6 +27,8 @@ export function SupportCTA({
             <div className="flex justify-center">
               <Link 
                 href="https://wa.me/919152333993?text=Hi%2C%20I%20need%20help%20setting%20up%20my%20Nordible%20email." 
+                target="_blank"
+                rel="noopener noreferrer"
                 className={buttonVariants({ 
                   size: "lg", 
                   className: "bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full px-12 h-20 text-2xl font-black shadow-2xl shadow-[#25D366]/30 transition-all hover:-translate-y-1 active:scale-95 flex items-center gap-3" 

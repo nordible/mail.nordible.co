@@ -21,7 +21,7 @@ export function CTA() {
               Setup takes less than 10 minutes.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <Link href="https://wa.me/919152333993" className={buttonVariants({ size: "lg", className: "bg-nordible-blue hover:bg-nordible-dark text-white rounded-full px-12 h-20 text-2xl font-black shadow-2xl shadow-nordible-blue/30 transition-all hover:-translate-y-1 active:scale-95" })}>
+              <Link href="https://wa.me/919152333993" target="_blank" rel="noopener noreferrer" className={buttonVariants({ size: "lg", className: "bg-nordible-blue hover:bg-nordible-dark text-white rounded-full px-12 h-20 text-2xl font-black shadow-2xl shadow-nordible-blue/30 transition-all hover:-translate-y-1 active:scale-95" })}>
                 Get Started Now
               </Link>
             </div>
