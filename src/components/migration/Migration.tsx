@@ -53,7 +53,7 @@ export function Migration() {
               </li>
             </ul>
 
-            <a href="https://wa.me/919152333993" target="_blank" className="inline-flex items-center gap-2 bg-nordible-blue hover:bg-nordible-dark text-white px-8 py-4 rounded-full font-heading font-semibold transition-colors">
+            <a href="https://wa.me/919152333993" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-nordible-blue hover:bg-nordible-dark text-white px-8 py-4 rounded-full font-heading font-semibold transition-colors">
               Request Free Migration
             </a>
           </div>

@@ -31,7 +31,7 @@ export function Pricing() {
               </div>
               <p className="text-sm text-nordible-blue font-bold tracking-wide">Billed annually</p>
             </div>
-            <a href="https://wa.me/919152333993?text=Hi%2C%20I%20want%20to%20get%20started%20with%20the%20Starter%20Email%20plan%20for%20%E2%82%B989." target="_blank" className="flex items-center justify-center w-full mb-10 border-2 border-nordible-blue/20 text-nordible-blue hover:bg-nordible-blue hover:text-white rounded-full font-bold py-4 transition-all duration-300 shadow-sm">
+            <a href="https://wa.me/919152333993?text=Hi%2C%20I%20want%20to%20get%20started%20with%20the%20Starter%20Email%20plan%20for%20%E2%82%B989." target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full mb-10 border-2 border-nordible-blue/20 text-nordible-blue hover:bg-nordible-blue hover:text-white rounded-full font-bold py-4 transition-all duration-300 shadow-sm">
               Get Started
             </a>
             <ul className="space-y-5 flex-1">
@@ -75,7 +75,7 @@ export function Pricing() {
               </div>
               <p className="text-sm text-nordible-blue font-black tracking-wide">Billed annually</p>
             </div>
-            <a href="https://wa.me/919152333993?text=Hi%2C%20I%20want%20to%20get%20started%20with%20the%20Professional%20Email%20plan%20for%20%E2%82%B9199." target="_blank" className="flex items-center justify-center w-full mb-10 bg-nordible-blue hover:bg-nordible-dark text-white rounded-full font-black py-5 transition-all duration-300 shadow-xl shadow-nordible-blue/30 scale-105">
+            <a href="https://wa.me/919152333993?text=Hi%2C%20I%20want%20to%20get%20started%20with%20the%20Professional%20Email%20plan%20for%20%E2%82%B9199." target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full mb-10 bg-nordible-blue hover:bg-nordible-dark text-white rounded-full font-black py-5 transition-all duration-300 shadow-xl shadow-nordible-blue/30 scale-105">
               Get Started
             </a>
             <ul className="space-y-5 flex-1">
@@ -116,7 +116,7 @@ export function Pricing() {
               </div>
               <p className="text-sm text-nordible-blue font-bold tracking-wide">Contact for details</p>
             </div>
-            <a href="https://wa.me/919152333993?text=Hi%2C%20I%20am%20interested%20in%20a%20Custom%20Email%20Plan." target="_blank" className="flex items-center justify-center w-full mb-10 border-2 border-nordible-blue/20 text-nordible-blue hover:bg-nordible-blue hover:text-white rounded-full font-bold py-4 transition-all duration-300 shadow-sm">
+            <a href="https://wa.me/919152333993?text=Hi%2C%20I%20am%20interested%20in%20a%20Custom%20Email%20Plan." target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full mb-10 border-2 border-nordible-blue/20 text-nordible-blue hover:bg-nordible-blue hover:text-white rounded-full font-bold py-4 transition-all duration-300 shadow-sm">
               Contact Us
             </a>
             <ul className="space-y-5 flex-1">

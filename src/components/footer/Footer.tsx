@@ -47,9 +47,9 @@ export function Footer() {
             <h4 className="font-heading font-bold text-base mb-6 uppercase tracking-[0.2em] text-white/40">Company</h4>
             <ul className="space-y-4 text-nordible-bg opacity-80 font-medium text-sm">
               <li><Link href="mailto:mail@nordible.co" className="hover:text-nordible-blue transition-colors">Contact Support</Link></li>
-              <li><Link href="https://wa.me/919152333993" className="hover:text-nordible-blue transition-colors">WhatsApp Support</Link></li>
-              <li><Link href="#" className="hover:text-nordible-blue transition-colors">Privacy Policy</Link></li>
-              <li><Link href="#" className="hover:text-nordible-blue transition-colors">Terms of Service</Link></li>
+              <li><Link href="https://wa.me/919152333993" target="_blank" rel="noopener noreferrer" className="hover:text-nordible-blue transition-colors">WhatsApp Support</Link></li>
+              <li><Link href="/privacy" className="hover:text-nordible-blue transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="hover:text-nordible-blue transition-colors">Terms of Service</Link></li>
             </ul>
           </div>
 

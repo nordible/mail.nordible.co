@@ -105,10 +105,14 @@ export default function BusinessEmailSetup() {
                 <div className="shrink-0 mt-1">
                    <MessageCircle className="w-6 h-6 text-nordible-blue" />
                 </div>
-                <div>
-                  <p className="text-nordible-dark font-medium mb-1">Too technical?</p>
-                  <p className="text-nordible-dark/70">Don't worry! Share your registrar login securely via WhatsApp, and our engineers will do this for you for free.</p>
-                </div>
+                <Link 
+                  href="https://wa.me/919152333993?text=Hi%2C%20I%20need%20help%20setting%20up%20my%20Nordible%20email." 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-nordible-blue hover:text-nordible-dark font-bold underline decoration-nordible-blue/30 underline-offset-4"
+                >
+                  Message Support on WhatsApp
+                </Link>
               </div>
             </div>
 
