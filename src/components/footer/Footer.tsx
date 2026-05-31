@@ -36,10 +36,10 @@ export function Footer() {
           <div>
             <h4 className="font-heading font-bold text-base mb-6 uppercase tracking-[0.2em] text-white/40">Guides</h4>
             <ul className="space-y-4 text-nordible-bg opacity-80 font-medium text-sm">
-              <li><Link href="/business-email-setup.html" className="hover:text-nordible-blue transition-colors">Get Started</Link></li>
-              <li><Link href="/gmail-business-email-setup.html" className="hover:text-nordible-blue transition-colors">Gmail Integration</Link></li>
-              <li><Link href="/outlook-business-email-setup.html" className="hover:text-nordible-blue transition-colors">Outlook Setup</Link></li>
-              <li><Link href="/apple-mail-business-email-setup.html" className="hover:text-nordible-blue transition-colors">Apple Mail Guide</Link></li>
+              <li><Link href="/business-email-setup" className="hover:text-nordible-blue transition-colors">Get Started</Link></li>
+              <li><Link href="/gmail-business-email-setup" className="hover:text-nordible-blue transition-colors">Gmail Integration</Link></li>
+              <li><Link href="/outlook-business-email-setup" className="hover:text-nordible-blue transition-colors">Outlook Setup</Link></li>
+              <li><Link href="/apple-mail-business-email-setup" className="hover:text-nordible-blue transition-colors">Apple Mail Guide</Link></li>
             </ul>
           </div>
 
