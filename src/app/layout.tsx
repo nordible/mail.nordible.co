@@ -14,8 +14,12 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: `${siteConfig.name} | Professional Business Email Hosting`,
   description: "Secure, reliable business email with custom domains, powerful spam protection, and effortless setup. Starting at ₹89/month.",
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: [
       { url: "/favicon.png", type: "image/png" },
@@ -26,6 +30,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${siteConfig.name} | Professional Business Email Hosting`,
     description: "Secure, reliable business email with custom domains, powerful spam protection, and effortless setup. Starting at ₹89/month.",
+    url: siteConfig.url,
+    siteName: siteConfig.name,
     type: "website",
   }
 };
